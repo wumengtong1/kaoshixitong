@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/db_tkst?useUnicode=true&amp;amp;amp;amp;amp;amp;characterEncoding=utf-8">
+		</property>
+		<property name="username" value="root"></property><!-- 数据库的连接名 -->
+		<property name="password" value="root"></property><!-- 数据库的连接密码，需要改成你自己的 -->
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/model/TAdmin.hbm.xml</value>
+				<value>com/model/TTea.hbm.xml</value>
+				<value>com/model/TKecheng.hbm.xml</value>
+				<value>com/model/TStu.hbm.xml</value>
+				<value>com/model/TTimu.hbm.xml</value>
+				<value>com/model/TShiti.hbm.xml</value>
+				<value>com/model/TJiaoyuan.hbm.xml</value>
+				<value>com/model/TFenshu.hbm.xml</value>
+		    </list>
+		</property>
+	</bean>
+	
+	
+	
+	
+	<!-- 后台的登录 -->
+	<bean id="loginService" class="com.service.loginService">
+		<property name="adminDAO">
+			<ref bean="TAdminDAO" />
+		</property>
+		<property name="teaDAO">
+			<ref bean="TTeaDAO" />
+		</property>
+		<property name="stuDAO">
+			<ref bean="TStuDAO" />
+		</property>
+		<property name="kechengDAO">
+			<ref bean="TKechengDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	<bean id="TAdminDAO" class="com.dao.TAdminDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="TTeaDAO" class="com.dao.TTeaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="teaAction" class="com.action.teaAction" scope="prototype">
+		<property name="teaDAO">
+			<ref bean="TTeaDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	<bean id="TKechengDAO" class="com.dao.TKechengDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="kechengAction" class="com.action.kechengAction" scope="prototype">
+		<property name="kechengDAO">
+			<ref bean="TKechengDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	<bean id="TStuDAO" class="com.dao.TStuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="stuAction" class="com.action.stuAction" scope="prototype">
+		<property name="stuDAO">
+			<ref bean="TStuDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TTimuDAO" class="com.dao.TTimuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="timuAction" class="com.action.timuAction" scope="prototype">
+		<property name="timuDAO">
+			<ref bean="TTimuDAO" />
+		</property>
+		<property name="kechengDAO">
+			<ref bean="TKechengDAO" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TShitiDAO" class="com.dao.TShitiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="shitiAction" class="com.action.shitiAction" scope="prototype">
+		<property name="shitiDAO">
+			<ref bean="TShitiDAO" />
+		</property>
+		<property name="timuDAO">
+			<ref bean="TTimuDAO" />
+		</property>
+		<property name="kechengDAO">
+			<ref bean="TKechengDAO" />
+		</property>
+		<property name="jiaoyuanDAO">
+			<ref bean="TJiaoyuanDAO" />
+		</property>
+		<property name="fenshuDAO">
+			<ref bean="TFenshuDAO" />
+		</property>
+		<property name="stuDAO">
+			<ref bean="TStuDAO" />
+		</property>
+	</bean>
+	
+	
+	<bean id="TJiaoyuanDAO" class="com.dao.TJiaoyuanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="TFenshuDAO" class="com.dao.TFenshuDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	</beans>

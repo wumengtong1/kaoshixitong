@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/city.do" location="50,50" dimension="203,104" />
+  <StrutsActivity path="/regions.do" location="350,250" dimension="229,104" />
+  <StrutsActivity path="/admin.do" location="50,450" dimension="219,104" />
+  <StrutsActivity path="/road.do" location="350,750" dimension="213,104" />
+  <StrutsActivity path="/application.do" location="650,950" dimension="247,104" />
+  <StrutsActivity path="/archive.do" location="1250,450" dimension="224,104" />
+  <StrutsActivity path="/approve.do" location="1250,150" dimension="232,104" />
+  <StrutsActivity path="/ruler.do" location="950,1250" dimension="212,104" />
+  <StrutsActivity path="/Archivemsg/city.jsp" location="650,50" dimension="148,53" />
+  <StrutsActivity path="/form/city.jsp" location="350,50" dimension="109,53" />
+  <StrutsActivity path="/Archivemsg/regiondetail.jsp" location="950,850" dimension="199,53" />
+  <StrutsActivity path="/form/regions.jsp" location="650,250" dimension="134,53" />
+  <StrutsActivity path="/Archivemsg/Admin.jsp" location="950,650" dimension="166,53" />
+  <StrutsActivity path="/Archivemsg/updateadmPwd.jsp" location="50,650" dimension="220,53" />
+  <StrutsActivity path="/form/admin.jsp" location="650,550" dimension="126,53" />
+  <StrutsActivity path="/Archivemsg/Road.jsp" location="50,850" dimension="160,53" />
+  <StrutsActivity path="/form/road.jsp" location="350,950" dimension="118,53" />
+  <StrutsActivity path="/Application/editApplication.jsp" location="350,1150" dimension="214,53" />
+  <StrutsActivity path="/Archivemsg/Application.jsp" location="50,1050" dimension="194,53" />
+  <StrutsActivity path="/form/application.jsp" location="50,1250" dimension="154,53" />
+  <StrutsActivity path="/Archivemsg/Archive.jsp" location="1250,1050" dimension="171,53" />
+  <StrutsActivity path="/form/archive.jsp" location="1250,850" dimension="131,53" />
+  <StrutsActivity path="/Archivemsg/Approve.jsp" location="1250,1250" dimension="179,53" />
+  <StrutsActivity path="/form/approve.jsp" location="650,1150" dimension="139,53" />
+  <StrutsActivity path="/Archivemsg/Ruler.jsp" location="1250,1550" dimension="159,53" />
+  <StrutsActivity path="/form/ruler.jsp" location="50,1650" dimension="117,53" />
+  <StrutsActivity path="/Archivemsg/Regions.jsp" location="950,250" dimension="176,53" />
+  <StrutsActivity path="/Employee/updateApwd.jsp" location="350,550" dimension="193,53" />
+  <StrutsActivity path="/Employee/driverlist.jsp" location="950,50" dimension="169,53" />
+  <StrutsActivity path="/Employee/city.jsp" location="50,250" dimension="138,53" />
+  <StrutsActivity path="/Archivemsg/updateApwd.jsp" location="950,450" dimension="203,53" />
+  <StrutsActivity path="/Archivemsg/R.jsp" location="650,750" dimension="137,53" />
+  <StrutsActivity path="/Employee/editApplication.jsp" location="950,1050" dimension="206,53" />
+  <StrutsActivity path="/A/Application.jsp" location="1250,650" dimension="135,53" />
+  <StrutsTransition id="/archive.do,list,/archive.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1362,554" />
+      <AbsolutePoint location="1362,569" />
+      <AbsolutePoint location="1549,569" />
+      <AbsolutePoint location="1549,502" />
+      <AbsolutePoint location="1474,502" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/regions.do,tolist,/Archivemsg/regiondetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="464,302" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/application.do,list,/application.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="773,1002" />
+      <AbsolutePoint location="773,1002" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/archive.jsp,null,/archive.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1381,876" />
+      <AbsolutePoint location="1400,876" />
+      <AbsolutePoint location="1400,554" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,list,/admin.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/road.jsp,null,/road.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/approve.jsp,null,/approve.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/archive.do,tolist,/Archivemsg/Archive.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1362,502" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/application.do,toedit,/Application/editApplication.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="773,1054" />
+      <AbsolutePoint location="773,1176" />
+      <AbsolutePoint location="564,1176" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approve.do,list,/approve.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,202" />
+      <AbsolutePoint location="1366,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approve.do,tosure,/Archivemsg/Approve.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,202" />
+      <AbsolutePoint location="1339,1276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approve.do,tolist,/Archivemsg/Approve.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,202" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,tolist,/Archivemsg/Admin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="159,502" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ruler.do,tolist,/Archivemsg/Ruler.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/admin.do,toeditadmPwd,/Archivemsg/updateadmPwd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="160,554" />
+      <AbsolutePoint location="160,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/city.do,list,/city.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,50" />
+      <AbsolutePoint location="151,-25" />
+      <AbsolutePoint location="714,-25" />
+      <AbsolutePoint location="714,118" />
+      <AbsolutePoint location="253,118" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ruler.do,list,/ruler.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/city.jsp,null,/city.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,76" />
+      <AbsolutePoint location="253,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/regions.jsp,null,/regions.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,276" />
+      <AbsolutePoint location="579,276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approve.do,sure,/approve.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,202" />
+      <AbsolutePoint location="1366,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/archive.do,toedit,/Application/editApplication.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1460,554" />
+      <AbsolutePoint location="1460,1378" />
+      <AbsolutePoint location="457,1378" />
+      <AbsolutePoint location="457,1203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/road.do,tolist,/Archivemsg/Road.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="453,854" />
+      <AbsolutePoint location="453,876" />
+      <AbsolutePoint location="210,876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/road.do,list,/road.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/city.do,tolist,/Archivemsg/city.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,102" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/city.do,listTopage,/city.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,102" />
+      <AbsolutePoint location="151,102" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/ruler.jsp,null,/ruler.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/application.jsp,null,/application.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/admin.jsp,null,/admin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/regions.do,list,/regions.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="464,302" />
+      <AbsolutePoint location="464,302" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/application.do,tolist,/Archivemsg/Application.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="773,1002" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+
+        <action name="stuAdd" class="stuAction" method="stuAdd">
+        </action>
+        <action name="stuDel" class="stuAction" method="stuDel">
+        </action>
+        <action name="stuMana" class="stuAction" method="stuMana">
+            <result name="success">/admin/stu/stuMana.jsp</result>
+        </action>
+        <action name="stu_all1" class="stuAction" method="stu_all1">
+            <result name="success">/admin/stu/stu_all1.jsp</result>
+        </action>
+        
+        
+        <action name="teaAdd" class="teaAction" method="teaAdd">
+        </action>
+        <action name="teaDel" class="teaAction" method="teaDel">
+        </action>
+        <action name="teaMana" class="teaAction" method="teaMana">
+            <result name="success">/admin/tea/teaMana.jsp</result>
+        </action>
+        
+        
+        <action name="kechengAdd" class="kechengAction" method="kechengAdd">
+        </action>
+        <action name="kechengDel" class="kechengAction" method="kechengDel">
+        </action>
+        <action name="kechengMana" class="kechengAction" method="kechengMana">
+            <result name="success">/admin/kecheng/kechengMana.jsp</result>
+        </action>
+        
+        
+        <action name="timu_danxuan_Add" class="timuAction" method="timu_danxuan_Add">
+        </action>
+        <action name="timu_duoxuan_Add" class="timuAction" method="timu_duoxuan_Add">
+        </action>
+        <action name="timu_jianda_Add" class="timuAction" method="timu_jianda_Add">
+        </action>
+        <action name="timuMana" class="timuAction" method="timuMana">
+            <result name="success">/admin/timu/timuMana.jsp</result>
+        </action>
+        <action name="timuDel" class="timuAction" method="timuDel">
+        </action>
+        <action name="timuDetail" class="timuAction" method="timuDetail">
+            <result name="success">/admin/timu/timuDetail.jsp</result>
+        </action>
+        <action name="timu_all" class="timuAction" method="timu_all">
+            <result name="success">/admin/timu/timu_all.jsp</result>
+        </action>
+        
+        
+        
+        <action name="shitiAdd" class="shitiAction" method="shitiAdd">
+        </action>
+        <action name="shitiDel" class="shitiAction" method="shitiDel">
+        </action>
+        <action name="shitiMana" class="shitiAction" method="shitiMana">
+            <result name="success">/admin/shiti/shitiMana.jsp</result>
+        </action>
+        <action name="shiti_timu_update_pre" class="shitiAction" method="shiti_timu_update_pre">
+            <result name="success">/admin/shiti/shiti_timu_update_pre.jsp</result>
+        </action>
+        <action name="shiti_timu_update" class="shitiAction" method="shiti_timu_update">
+        </action>
+        <action name="shiti_timu_liulan" class="shitiAction" method="shiti_timu_liulan">
+            <result name="success">/admin/shiti/shiti_timu_liulan.jsp</result>
+        </action>
+        <action name="shiti_all" class="shitiAction" method="shiti_all">
+            <result name="success">/astu/shiti/shiti_all.jsp</result>
+        </action>
+        <action name="shiti_kaoshi_timu" class="shitiAction" method="shiti_kaoshi_timu">
+            <result name="success">/astu/shiti/shiti_kaoshi_timu.jsp</result>
+        </action>
+        <action name="shiti_jiaojuan" class="shitiAction" method="shiti_jiaojuan">
+        </action>
+        <action name="shiti_all1" class="shitiAction" method="shiti_all1">
+            <result name="success">/admin/shiti/shiti_all1.jsp</result>
+        </action>
+        <action name="shiti_yuejuan" class="shitiAction" method="shiti_yuejuan">
+            <result name="success">/atea/yuejuan/shiti_yuejuan.jsp</result>
+        </action>
+        <action name="shiti_fenshu_add" class="shitiAction" method="shiti_fenshu_add">
+        </action>
+        <action name="shiti_fenshu_Mana" class="shitiAction" method="shiti_fenshu_Mana">
+            <result name="success">/admin/fenshu/shiti_fenshu_Mana.jsp</result>
+        </action>
+        <action name="fenshuMine" class="shitiAction" method="fenshuMine">
+            <result name="success">/admin/fenshu/fenshuMine.jsp</result>
+        </action>
+    </package>
+</struts>
